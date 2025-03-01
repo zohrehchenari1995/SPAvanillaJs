@@ -1,0 +1,303 @@
+@import url("/client/css/font.css");
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* VARIABLE */
+:root {
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #bcb3b3f6;
+  --logo-color: #363679;
+  --moon-color: #363679;
+  --sun-color: #ffd700;
+  /*====transition====*/
+  --trans-02: all 0.2s linear;
+  --trans-03: all 0.3s linear;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
+}
+
+body {
+  background-color: var(--body-color);
+  position: relative;
+  transition: var(--trans-03);
+  height: 110vh;
+}
+
+/* dark light mode button*/
+body.dark .toggle-switch .switch {
+  right: 1.2rem;
+  transition: var(--trans-04);
+}
+body.dark {
+  --body-color: #5f666c;
+  --sidebar-color: #434446;
+  --primary-color: #d8dde1;
+  --primary-color-light: #3a3b3c;
+  --toggle-color: #fff;
+  --text-color: #ccc;
+  --logo-color: #fff;
+  --moon-color: #363679;
+  --sun-color: #ffd700;
+}
+/* FONT SIZE */
+html {
+  font-size: 62.5%;
+}
+
+/*------------------------------ CONTENT STYLE */
+.content {
+  display: flex;
+}
+
+/* HEADER */
+.content__sidebar {
+  background-color: var(--sidebar-color);
+  width: 255px;
+  height: 100vh;
+  padding-right: 1rem;
+  position: sticky;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 4rem 0 5rem 0;
+}
+.sidebar__logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  margin-left: 5rem;
+}
+/* END HEADER */
+
+/* CHEVRON TOGGLER */
+.content__sidebar.close .sidebar__list .chevron-margin {
+  margin-right: 20px;
+  font-size: 1.8rem;
+}
+.content__sidebar.close {
+  width: 78px;
+}
+.content__sidebar.close  .sidebar__logo img{
+  margin-right: 1rem;
+}
+.content__sidebar.close .sidebar__chevron {
+  position: fixed;
+  right: 65px;
+}
+.content__sidebar.close .list__search .search {
+  padding-right: 200px;
+}
+.content__sidebar.close .list__search {
+  width: 90%;
+  overflow-x: hidden;
+}
+.content__sidebar.close .content__logout .logout__title,
+.content__sidebar.close .mode .mode__text,
+.content__sidebar.close .list__item .item__title,
+.content__sidebar.close .sidebar__text 
+.content__sidebar.close input::placeholder{
+  opacity: 0;
+}
+.content__sidebar.close .mode .toggle-switch {
+  left: 5.5rem;
+  padding: 1rem;
+ 
+}
+.content__sidebar.close .mode .toggle-switch .switch{
+  right: 0.1rem;
+  text-align: center;
+}
+.content__sidebar.close .mode {
+  width: 90%;
+}
+.content__sidebar.close .list__item a:hover 
+, .content__sidebar.close .content__logout a:hover{
+  width: 90%;
+  overflow: hidden;
+  padding-right: 0.2rem;
+}
+
+/* END CHEVRON TOGGLER */
+
+
+.sidebar__chevron {
+  position: fixed;
+  right: 240px;
+  background-color: var(--primary-color);
+  padding: 0.7rem 1rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+}
+.sidebar__title .sidebar__text {
+  text-transform: uppercase;
+  color: var(--logo-color);
+  font-size: 3rem;
+  font-weight: bold;
+}
+.list__search {
+  background-color: var(--body-color);
+  width: 95%;
+  height: 50px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  overflow-x: hidden;
+}
+.list__search .search {
+  padding: 0 2.2rem;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+  
+}
+.list__search input {
+  outline: none;
+  border: none;
+  background-color: var(--body-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--toggle-color);
+}
+
+
+
+.list__item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 3rem;
+}
+.list__item a:hover {
+  background-color: var(--body-color);
+  width: 95%;
+  height: 50px;
+  border-radius: 6px;
+  transition: var(--trans-02);
+  padding-right: 0.5rem;
+}
+.list__item .item__title {
+  padding-right: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--logo-color);
+}
+
+.list__item .item__icon {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+}
+
+.content__logout a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.content__logout a:hover {
+  background-color: var(--body-color);
+  width: 95%;
+  height: 50px;
+  border-radius: 6px;
+  transition: var(--trans-02);
+  padding-right: 0.5rem;
+}
+.content__logout .logout__title {
+  padding-right: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--logo-color);
+}
+.content__logout .icon-logout {
+  color: var(--primary-color);
+  font-size: 1.7rem;
+}
+
+
+.mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3rem;
+  background-color: var(--body-color);
+  width: 95%;
+  height: 50px;
+  border-radius: 6px;
+}
+.moon-sun {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0.8rem;
+}
+.moon-sun .moon {
+  color: var(--moon-color);
+  font-size: 1.4rem;
+  margin-bottom: 0.1rem;
+}
+.moon-sun .sun {
+  color: var(--sun-color);
+  font-size: 1.4rem;
+}
+.mode .mode__text {
+  color: var(--logo-color);
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0 1.5rem;
+}
+
+.toggle-switch {
+  background-color: var(--text-color);
+  width: 20%;
+  height: 28px;
+  position: relative;
+  border-radius: 6px;
+}
+.toggle-switch .switch {
+  background-color: var(--sidebar-color);
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 100%;
+  transition: var(--trans-04);
+}
+
+.content .sidebar__list {
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/*---------------------- MEDIA FOR FONT-SIZE */
+@media screen and (min-width: 1024px) {
+  .content__sidebar {
+    font-size: 1.5rem;
+  }
+  .content__main {
+    font-size: 1.8rem;
+  }
+}
+/* END MEDIA FOR FONT-SIZE------------------ */
