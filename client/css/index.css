@@ -22,8 +22,8 @@
   --moon-color: #363679;
   --sun-color: #ffd700;
   /*====transition====*/
-  --trans-02: all 0.2s linear;
-  --trans-03: all 0.3s linear;
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
   --trans-04: all 0.4s ease;
   --trans-05: all 0.5s ease;
 }
@@ -32,7 +32,7 @@ body {
   background-color: var(--body-color);
   position: relative;
   transition: var(--trans-03);
-  height: 110vh;
+
 }
 
 /* dark light mode button*/
@@ -64,7 +64,7 @@ html {
 /* HEADER */
 .content__sidebar {
   background-color: var(--sidebar-color);
-  width: 255px;
+  width: 250px;
   height: 100vh;
   padding-right: 1rem;
   position: sticky;
@@ -72,6 +72,8 @@ html {
   right: 0;
   overflow-y: scroll;
   overflow-x: hidden;
+  /* transition: var(--trans-02); */
+  cursor: pointer;
 }
 .sidebar__title {
   display: flex;
@@ -89,15 +91,13 @@ html {
 
 /* CHEVRON TOGGLER */
 .content__sidebar.close .sidebar__list .chevron-margin {
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 1.8rem;
 }
 .content__sidebar.close {
-  width: 78px;
+  width: 80px;
 }
-.content__sidebar.close  .sidebar__logo img{
-  margin-right: 1rem;
-}
+
 .content__sidebar.close .sidebar__chevron {
   position: fixed;
   right: 65px;
@@ -117,7 +117,7 @@ html {
   opacity: 0;
 }
 .content__sidebar.close .mode .toggle-switch {
-  left: 5.5rem;
+  left: 6.5rem;
   padding: 1rem;
  
 }
@@ -285,10 +285,10 @@ html {
 }
 
 .content .sidebar__list {
-  height: calc(100% - 50px);
+  height: calc(95% - 50px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 /*---------------------- MEDIA FOR FONT-SIZE */
