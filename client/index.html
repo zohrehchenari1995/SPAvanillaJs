@@ -1,122 +1,126 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SPA</title>
-  <link rel="stylesheet" href="/client/css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-   crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  
-  <section class="content">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA</title>
+    <link rel="stylesheet" href="/client/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="content">
+      <!---------------------------------------------- HEADER -->
+      <div class="content__sidebar">
+        <div class="sidebar__title">
+          <span class="sidebar__logo">
+            <img src="/client/assets/image/logo1.jpg" alt="" />
+          </span>
+          <span class="sidebar__text">
+            <p>spa</p>
+          </span>
 
-    <!---------------------------------------------- HEADER -->
-    <div class="content__sidebar">
-
-      <div class="sidebar__title">
-        <span class="sidebar__logo">
-          <img src="/client/assets/image/logo1.jpg" alt="">
-        </span>
-        <span class="sidebar__text">
-          <p>spa</p>
-        </span>
-
-        <span class="sidebar__chevron">
-          <i class="fa-solid fa-chevron-left  chevron__toggle"></i>
-        </span>
-      </div>
-      <!-- END HEADER---------------------------------------- -->
-
-
-      <div class="sidebar__list">
-
-        <li class="list__search">
-          <i class="fa-solid fa-magnifying-glass  search  chevron-margin"></i>
-          <input type="text" placeholder="جستجو کنید">
-       
-        </li>
-
-        <ul class="list__items">
-
-          <li class="list__item">
-            <a href="#">
-              <span><i class="fa-solid fa-house item__icon  chevron-margin"></i></span>
-              <span><p class="item__title">داشبورد</p></span>
-            </a>
-          </li>
-
-          <li class="list__item">
-            <a href="#">
-              <span><i class="fa-brands fa-product-hunt item__icon  chevron-margin"></i></span>
-              <span><p class="item__title">محصولات</p></span>
-            </a>
-          </li>
-
-          <li class="list__item">
-            <a href="#">
-              <span><i class="fa-brands fa-blogger-b  item__icon  chevron-margin"></i></span>
-              <span><p class="item__title">پست ها</p></span>
-            </a>
-          </li>
-
-          <li class="list__item">
-            <a href="#">
-              <span><i class="fa-solid fa-bell item__icon  chevron-margin"></i></span>
-              <span><p class="item__title">اعلان ها</p></span>
-            </a>
-          </li>
-
-          <li class="list__item">
-            <a href="#">
-              <span><i class="fa-solid fa-heart item__icon  chevron-margin"></i></span>
-              <span><p class="item__title">پسندیدن ها</p></span>
-            </a>
-          </li>
-
-        </ul>
-
-        <!-- BOTTOM SIDEBAR -->
-        <div class="bottom__content">
-          <ul class="content__list"> 
-          <li class="content__logout">
-            <a href="#">
-              <span><i class="fa-solid fa-right-from-bracket  icon-logout  chevron-margin"></i></span>
-              <span><p class="logout__title">خروج</p></span>
-            </a>
-          </li>
-    
-          <li class="mode">
-            <div class="moon-sun">
-              <i class="fa-solid fa-moon moon"></i>
-              <i class="fa-solid fa-sun sun"></i>
-            </div>
-    
-            <span class="mode__text">تاریک و روشن</span>
-    
-            <div class="toggle-switch">
-              <span class="switch"></span>
-            </div>
-          </li>
-        </ul>
+          <span class="sidebar__chevron">
+            <i class="fa-solid fa-chevron-left chevron__toggle"></i>
+          </span>
         </div>
-    
+        <!-- END HEADER---------------------------------------- -->
+
+        <div class="sidebar__list">
+          <li class="list__search">
+            <i class="fa-solid fa-magnifying-glass search chevron-margin"></i>
+            <input type="text" placeholder="جستجو کنید" />
+          </li>
+
+          <ul class="list__items">
+            <li class="list__item">
+              <a href="/client/" data-link>
+                <span
+                  ><i class="fa-solid fa-house item__icon chevron-margin"></i
+                ></span>
+                <span><p class="item__title">داشبورد</p></span>
+              </a>
+            </li>
+
+            <li class="list__item">
+              <a href="/client/products" data-link>
+                <span
+                  ><i
+                    class="fa-brands fa-product-hunt item__icon chevron-margin"
+                  ></i
+                ></span>
+                <span><p class="item__title">محصولات</p></span>
+              </a>
+            </li>
+
+            <li class="list__item">
+              <a href="/client/posts">
+                <span
+                  ><i
+                    class="fa-brands fa-blogger-b item__icon chevron-margin"
+                  ></i
+                ></span>
+                <span><p class="item__title">پست ها</p></span>
+              </a>
+            </li>
+
+            <li class="list__item">
+              <a href="/client/notification" data-link>
+                <span
+                  ><i class="fa-solid fa-bell item__icon chevron-margin"></i
+                ></span>
+                <span><p class="item__title">اعلان ها</p></span>
+              </a>
+            </li>
+
+            <li class="list__item" data-link>
+              <a href="/client/likes">
+                <span
+                  ><i class="fa-solid fa-heart item__icon chevron-margin"></i
+                ></span>
+                <span><p class="item__title">پسندیدن ها</p></span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- BOTTOM SIDEBAR -->
+          <div class="bottom__content">
+            <ul class="content__list">
+              <li class="content__logout">
+                <a href="/client/logout">
+                  <span
+                    ><i
+                      class="fa-solid fa-right-from-bracket icon-logout chevron-margin"
+                    ></i
+                  ></span>
+                  <span><p class="logout__title">خروج</p></span>
+                </a>
+              </li>
+
+              <li class="mode">
+                <div class="moon-sun">
+                  <i class="fa-solid fa-moon moon"></i>
+                  <i class="fa-solid fa-sun sun"></i>
+                </div>
+
+                <span class="mode__text">تاریک و روشن</span>
+
+                <div class="toggle-switch">
+                  <span class="switch"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="content__main">متن</div>
+    </section>
 
-    </div>
-    <div class="content__main">متن</div>
-
-    
-
-   
-  </section>
-
-  <script src="/client/app.js" type="module"></script>
-</body>
+    <script src="/client/app.js" type="module"></script>
+  </body>
 </html>
-
-
-
-
-
