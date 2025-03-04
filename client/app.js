@@ -1,3 +1,15 @@
+// IMPORT ALL PAGES
+import Dashboard from "./pages/Dashboard.js";
+import Products from "./pages/Products.js";
+import Posts from "./pages/Posts.js";
+import Notification from "./pages/Notification.js";
+import Likes from "./pages/Likes.js";
+import Logout from "./pages/Logout.js";
+import Notfound from "./pages/Notfound.js";
+
+
+
+
 
 // ---------------------------------------------SELECTING
 const body = document.querySelector("body");
@@ -25,12 +37,12 @@ chevronToggle.addEventListener("click", () => {
 // ------------------1.WHAT VIEW SHOW USER BASE ON ROUTE?:
 function router(params){
   const routes =[
-    {path:"/client/",view:()=>{ console.log("dashboard page")}},
-    {path:"/client/products",view:()=>{ console.log("products page")}},
-    {path:"/client/posts",view:()=>{ console.log("posts page")}},
-    {path:"/client/notification",view:()=>{ console.log("notif page")}},
-    {path:"/client/likes",view:()=>{ console.log("likes page")}},
-    {path:"/client/logout",view:()=> { console.log("logout page")}},
+    {path:"/client/",view: Dashboard},
+    {path:"/client/products",view: Products},
+    {path:"/client/posts",view: Posts},
+    {path:"/client/notification",view: Notification},
+    {path:"/client/likes",view: Likes},
+    {path:"/client/logout",view: Logout},
   ];
 
   // check routes in browser url  with path user:
@@ -49,11 +61,13 @@ function router(params){
    //  if match false:
    if(!match){
      match={
-       route:{path:"/client/not-found",view:()=>{console.log("not-found page")}},
+       route:{path:"/client/not-found",view: Notfound},
        isMatch: true,
       };
-    }
-    console.log(match.route.view());
+    };
+
+    document.querySelector(".content__main").innerHTML = match.route.view();
+    // console.log(match.route.view());
 }
 
 // END WHAT VIEW SHOW USER BASE ON ROUTE----------

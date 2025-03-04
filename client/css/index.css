@@ -290,6 +290,10 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
 }
+.content__main{
+ margin: 10rem;
+ color: var(--primary-color);
+}
 
 /*---------------------- MEDIA FOR FONT-SIZE */
 @media screen and (min-width: 1024px) {
